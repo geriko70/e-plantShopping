@@ -296,6 +296,7 @@ function ProductList({ onHomeClick }) {
                                     <div className='product-description'>{plant.description}</div>
                                     <div className='product-cost'>{plant.cost}</div>
                                     <button className='product-button' onClick={()=>handleAddToCart(plant)}>Add To Cart</button>
+                                    <div className='product-quantity-inCart'>In Cart: {cartItems.find(item=>item.name===plant.name)?.quantity || 0}</div>
                                 </div>
                             ))}
                         </div>
